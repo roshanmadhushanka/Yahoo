@@ -14,8 +14,8 @@ test = pd.read_csv('test.csv')
 train_frame = Frame(train)
 test_frame = Frame(test)
 
-train_frame.look_back(input_column='value', steps=5)
-test_frame.look_back(input_column='value', steps=5)
+train_frame.look_back(input_column='value', steps=10)
+test_frame.look_back(input_column='value', steps=10)
 
 response_column = 'is_anomaly'
 training_columns = train_frame.get_column_names()

@@ -14,14 +14,14 @@ test = pd.read_csv('test.csv')
 train_frame = Frame(train)
 test_frame = Frame(test)
 
-train_frame.look_back(input_column='value', steps=5)
-test_frame.look_back(input_column='value', steps=5)
+train_frame.look_back(input_column='value', steps=10)
+test_frame.look_back(input_column='value', steps=10)
 
 train_frame = train_frame.get_panda_frame()
 test_frame = test_frame.get_panda_frame()
 
-train_frame = XMLParser.apply_feature_eng(pandas_frame=train_frame, xml_file='feature')
-test_frame = XMLParser.apply_feature_eng(pandas_frame=test_frame, xml_file='feature')
+train_frame = XMLParser.apply_feature_eng(pandas_frame=train_frame, xml_file='feature10')
+test_frame = XMLParser.apply_feature_eng(pandas_frame=test_frame, xml_file='feature10')
 
 response_column = 'is_anomaly'
 training_columns = list(train_frame.columns)
@@ -37,6 +37,8 @@ h_test[response_column] = h_test[response_column].asfactor()
 
 h_train.describe()
 model = H2ODeepLearningEstimator(epochs=100, balance_classes=True, variable_importances=True)
+# model = H2ORandomForestEstimator(balance_classes=True, max_depth=20, ntrees=100)
+# model = H2OGradientBoostingEstimator(balance_classes=True)
 model.train(x=training_columns, y=response_column, training_frame=h_train)
 
 print model.model_performance(test_data=h_test)

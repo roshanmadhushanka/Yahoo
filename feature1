@@ -1,0 +1,10 @@
+<flow>
+    <moving_average window="5">
+        <feature>value</feature>
+        <feature>value(t+1)</feature>
+    </moving_average>
+    <moving_standard_deviation window="5">
+        <feature>value</feature>
+        <feature>value(t+1)</feature>
+    </moving_standard_deviation>
+</flow>
