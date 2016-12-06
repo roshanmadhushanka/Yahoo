@@ -6,7 +6,7 @@ from h2o.estimators import H2ORandomForestEstimator
 from featureeng import Frame
 import pandas as pd
 
-h2o.init()
+h2o.init(max)
 
 train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
@@ -14,8 +14,8 @@ test = pd.read_csv('test.csv')
 train_frame = Frame(train)
 test_frame = Frame(test)
 
-train_frame.look_back(input_column='value', steps=10)
-test_frame.look_back(input_column='value', steps=10)
+train_frame.look_back(input_column='value', steps=12)
+test_frame.look_back(input_column='value', steps=12)
 
 response_column = 'is_anomaly'
 training_columns = train_frame.get_column_names()
@@ -33,7 +33,7 @@ h_test[response_column] = h_test[response_column].asfactor()
 
 # model = H2ORandomForestEstimator(nfolds=10, balance_classes=True, max_depth=20, ntrees=100)
 h_train.describe()
-model = H2ODeepLearningEstimator(nfolds=10, epochs=100, balance_classes=True, variable_importances=True)
+model = H2ODeepLearningEstimator(nfolds=10, activation='maxout', distribution='multinomial', epochs=100, balance_classes=True, variable_importances=True)
 model.train(x=training_columns, y=response_column, training_frame=h_train)
 
 print model.model_performance(test_data=h_test)
