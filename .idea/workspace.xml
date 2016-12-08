@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="061748f7-d939-49d4-88bf-351a9ef9abc9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flow10_Visualize.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flow11_Manual_Accuracy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flow9_Analyze_Correlation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flow7_A4_Test.py" afterPath="$PROJECT_DIR$/Flow7_A4_Test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flow8_Remove_And_Train.py" afterPath="$PROJECT_DIR$/Flow8_Remove_And_Train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/varimp.csv" afterPath="$PROJECT_DIR$/varimp.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -628,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481077625048</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Scatter Plot">
+      <created>1481161909638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1481161909638</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -664,7 +665,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A3 Benchwork" />
     <MESSAGE value="A3 and A4 benchmark tests are completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="A3 and A4 benchmark tests are completed" />
+    <MESSAGE value="Scatter Plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scatter Plot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -908,6 +910,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
